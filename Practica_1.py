@@ -1,7 +1,7 @@
 import pandas as pd
-from tabulate import tabulate 
 import requests
 import io
+import csv
 
 def get_csv_from_url(url: str) -> pd.DataFrame:
 
