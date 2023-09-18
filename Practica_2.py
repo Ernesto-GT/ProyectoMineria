@@ -18,7 +18,6 @@ def asignar_Instancias():
                     n += 1
                     posicion = row[6].find(',')
                     posicion2 = row[3].find(',')
-                    print(posicion2)
                     if(posicion > 0 and posicion2 > 0):
                         datos.append([n, row[1], row[2], row[3][0:posicion2], row[4], row[5], int(row[6][(posicion + 2):(posicion + 6)]), row[7], row[8], row[9], row[10]])
                     elif(posicion > 0 and posicion2 == -1):
@@ -27,4 +26,7 @@ def asignar_Instancias():
     return(datos)
 
 df = pd.DataFrame(asignar_Instancias())
-df.to_csv("DataSetClean.csv", index=False, header=False)
+df.to_csv("DataSetClean.csv", index=False, header=None)
+
+df2 = pd.read_csv('DataSetClean.csv')
+print(df2.head())
