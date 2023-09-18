@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+
 datos = []
 
 def asignar_Instancias():
@@ -13,10 +14,14 @@ def asignar_Instancias():
                 datos.append(['anime_id','Name','Score','Genres','Type','Episodes','Aired','Source','Rank','Popularity','Members'])
                 titulo = False
             elif(len(row) > 0):
-                if(row[2] != 'UNKNOWN' and row[5] != 'UNKNOWN' and row[8] != 'UNKNOWN' and row[9] != 'UNKNOWN' and row[10] != 'UNKNOWN' and len(row[6]) > 10):
+                if(row[2] != 'UNKNOWN' and row[3] != 'UNKNOWN'and row[5] != 'UNKNOWN' and row[8] != 'UNKNOWN' and row[9] != 'UNKNOWN' and row[10] != 'UNKNOWN' and len(row[6]) > 10):
                     n += 1
                     posicion = row[6].find(',')
-                    if(posicion > 0):
+                    posicion2 = row[3].find(',')
+                    print(posicion2)
+                    if(posicion > 0 and posicion2 > 0):
+                        datos.append([n, row[1], row[2], row[3][0:posicion2], row[4], row[5], int(row[6][(posicion + 2):(posicion + 6)]), row[7], row[8], row[9], row[10]])
+                    elif(posicion > 0 and posicion2 == -1):
                         datos.append([n, row[1], row[2], row[3], row[4], row[5], int(row[6][(posicion + 2):(posicion + 6)]), row[7], row[8], row[9], row[10]])
                     
     return(datos)
