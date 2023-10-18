@@ -40,7 +40,7 @@ def EstadisticaPorGeneroYEpisodios():
 df = pd.read_csv('DataSetClean.csv')
 #Ejecucios de las pruebas de Estadistica Descriptiva
 EstadisticaPorGeneroYPuntajes()
-EstadisticaPorGeneroYSeguidores()
-EstadisticaPorTipoYPuntajes()
-EstadisticaPorFechaYPuntajes()
-EstadisticaPorGeneroYEpisodios()
+#EstadisticaPorGeneroYSeguidores()
+#EstadisticaPorTipoYPuntajes()
+#EstadisticaPorFechaYPuntajes()
+#EstadisticaPorGeneroYEpisodios()

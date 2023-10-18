@@ -18,8 +18,8 @@ def RL_MoviesAdventure():
     plt.xlabel('Puntaje')
     plt.ylabel('Fecha Emision')
     plt.title('Regresión Lineal: Puntaje vs Fecha Emision \n (Peliculas de Aventura)')
+    plt.savefig("RegresionLineal_P6/Movies-Adventure_Fecha-Puntaje.png")
     plt.show()
-    #plt.savefig("RegresionLineal_P6/Movies-Adventure_Fecha-Puntaje.png")
     plt.close()
 
 def RL_MangaSports():
@@ -35,11 +35,11 @@ def RL_MangaSports():
     plt.xlabel('Miembros')
     plt.ylabel('Fecha Emision')
     plt.title('Regresión Lineal: Puntajes vs Fecha Emision \n (Series de Deportes basadas en Manga)')
-    plt.show()
     plt.savefig("RegresionLineal_P6/Manga-Deportes_Fecha-Puntaje.png")
+    plt.show()
     plt.close()
 
-#RL_MoviesAdventure()
+RL_MoviesAdventure()
 RL_MangaSports()
 
 
