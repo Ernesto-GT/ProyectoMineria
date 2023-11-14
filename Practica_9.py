@@ -28,7 +28,7 @@ def Forecasting(genre, inter, value, title):
     plt.fill_between(db[inter], predictions['obs_ci_lower'], predictions['obs_ci_upper'], alpha=.1, color='green')
     plt.xlabel('Año')
     plt.ylabel('Puntuacion Promedio')
-    #plt.savefig("Forecasting_P9/"+ title +".png")
+    plt.savefig("Forecasting_P9/"+ title +".png")
     plt.show()
     plt.close()
     plt.clf()
