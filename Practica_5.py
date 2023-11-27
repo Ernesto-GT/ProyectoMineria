@@ -98,8 +98,8 @@ def anova_5():
     comprobar_2(resultado3)
 
 #Ejecuciones de los distintos ANOVA's creados (Recomendacion: ejecutar uno a la vez)
-anova_1()
-anova_2()
-anova_3()
+#anova_1()
+#anova_2()
+#anova_3()
 anova_4()
 anova_5()
